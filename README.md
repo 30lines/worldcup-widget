@@ -26,12 +26,12 @@ Adds a sidebar widget that let's you pick your favorite team, adjust some option
 
 ## Screenshots
 
-1. Main Widget admin and display.
+#### Main Widget admin and display.
 
 ![Main Widget admin and display](screenshot-1.jpg)
 
 
-2. Top Scorer Widget admin and display.
+#### Top Scorer Widget admin and display.
 
 ![Top Scorer Widget admin and display](screenshot-2.jpg)
 
