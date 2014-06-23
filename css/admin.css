@@ -1,0 +1,44 @@
+.worldcup-admin .favorite-team-pick {
+	clear:right;
+	overflow:auto;
+	padding:0 1em 1.5em;
+}
+.worldcup-admin .theme {
+	padding:0 1em;
+	float:right;
+	text-align: right;
+}
+.worldcup-admin .favorite-team-pick .team {
+	float:right;
+	text-align: right;
+	width:100%;
+}
+.worldcup-admin img {
+	float:left;
+	width:78px;
+	padding:1em;
+}
+.worldcup-admin .favorite-team-pick label, .worldcup-admin .theme label, .worldcup-admin .playercount label {
+	clear:both;
+	display:block;
+	font-weight:bold;
+	margin-top: 1em;
+}
+.worldcup-admin .show-matches label, .worldcup-admin .show-emblem label  {
+	font-weight:bold;
+	clear:both;
+	margin-top:1em;
+}
+.worldcup-admin .show-matches, .worldcup-admin .show-emblem {
+	text-align: right;
+	padding:0 1em;
+	margin-bottom:3.5em;
+}
+.worldcup-admin .show-matches input, .worldcup-admin .show-emblem input {
+	margin:0;
+}
+.worldcup-admin .playercount {
+	padding:0 1em;
+	text-align:right;
+	margin-bottom:3.5em;
+}

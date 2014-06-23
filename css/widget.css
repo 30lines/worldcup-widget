@@ -1,0 +1,94 @@
+.favorite-team img {
+	display:block;
+	max-width:100%;
+	margin:0 auto 1em;
+}
+.favorite-team {
+	text-align: center;
+}
+.favorite-team h1 {
+	text-align: left;
+}
+.favorite-team p {
+	margin:0 0 1em;
+}
+.favorite-team .group {
+}
+.match {
+	position: relative;
+}
+.match img {
+	width:35px;
+	display:inline;
+	margin: 0 0.75em;
+}
+.match .score {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	font-size: 2.5em;
+	margin:0;
+	color: #fff;
+	text-shadow: #000 1px 1px 10px, #000 1px 1px 10px, #000 1px 1px 10px;
+}
+.worldcup-widget-class .player {
+	position: relative;
+	margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #222;
+}
+.worldcup-widget-class .player .goal-count {
+	position: absolute;
+	top: 5px;
+	right: 12px;
+	display: block;
+	z-index: 10;
+	font-weight: bold;
+	color: #FFF;
+	text-shadow: #000 1px 1px 10px, #000 1px 1px 10px, #000 1px 1px 10px;
+	font-size: 1.5em;
+}
+.worldcup-widget-class .player .profile {
+	max-width: 25%;
+	width:41px;
+	border-radius: 50%;
+	box-shadow: 1px 1px 0 0 #CCC;
+	margin-right: 5%;
+}
+.worldcup-widget-class .player .nationality {
+	display:none;
+}
+.worldcup-widget-class .player .flag {
+	position:absolute;
+	top: 4px;
+	right: 0;
+	max-width: 20%;
+	z-index: 5;
+	width:32px;
+}
+/*
+.theme-dark .match .score {
+	color:#e7e8b0;
+}
+.theme-dark .match.winner .score {
+	color:#12c224;
+}
+.theme-dark .match.loser .score {
+	color:#ff7e79;
+}
+*/
+.theme-dark.favorite-team {
+	color:#fff;
+	background:rgba(0,0,0,0.75);
+	padding:1em;
+}
+.theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4 {
+	color:#fff;
+}
+.theme-dark .match {
+	color:#fff;
+}
+.theme-dark .match.completed {
+	color:#888;
+}
