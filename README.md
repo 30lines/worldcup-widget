@@ -43,6 +43,9 @@ Yes, most definitely. At this time I've decided to just release and start rollin
 
 ## Changelog
 
+### 1.0.3
+* Updated main widget to pull Quarter Final / Elimination bracket games. Expect 2 new widgets next update along with additional toggles for the main widget.
+
 ### 1.0.2
 * Added Top Scorers Widget.
 

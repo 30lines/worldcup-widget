@@ -15,7 +15,7 @@
  * Plugin Name:       WorldCup Widget
  * Plugin URI:        http://30lines.com
  * Description:       
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            Eric Katz
  * Author URI:        http://ericnkatz.com
  * License:           GPL-2.0+

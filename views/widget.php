@@ -12,16 +12,18 @@ $response = file_get_contents($cachedTeams);
 
 $teams = json_decode($response, TRUE);
 
+$displayTeam = $teams[$selectedTeam];
 
 
-$matches = $this->worldcup_api_call('matches', '&sort=startTime');
+
+$matches = $this->worldcup_api_call('matches', '&sort=startTime&limit=400');
+
 $live = $this->worldcup_api_call('teams', '&id=' . $teams[$selectedTeam]['id']);
 
 
 $team_matches = array();
 
 
-$displayTeam = $teams[$selectedTeam];
 
 ?>
 <div class="favorite-team <?php echo 'theme-' . strtolower($theme); ?>">
@@ -51,7 +53,6 @@ if($show_matches) {
 			array_push($team_matches, $match);
 		}
 	}
-
 	foreach ($team_matches as $match) {
 		
 		$matchTime = DateTime::createFromFormat(
