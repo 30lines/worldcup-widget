@@ -43,6 +43,9 @@ Yes, most definitely. At this time I've decided to just release and start rollin
 
 ## Changelog
 
+### 1.0.4
+* Updated main widget seperate out upcoming match. Display eliminated status, change 'show matches' to 'show all matches'. Adjusted view styling for Top Scorers widget, included Golden Boot emblem for Top Scorers from all teams list. Added Group Standings widget, to display Group Stats from the group stages.
+
 ### 1.0.3
 * Updated main widget to pull Quarter Final / Elimination bracket games. Expect 2 new widgets next update along with additional toggles for the main widget.
 

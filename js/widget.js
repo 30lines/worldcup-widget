@@ -1,6 +1,9 @@
 (function ($) {
-	"use strict";
+	'use strict';
 	$(function () {
-		// Place your public-facing JavaScript here
+		$('.playerlist').on('click', '.player > a', function(e) {
+			$(this).parent().find('.extra-stats').slideToggle();
+			e.preventDefault();
+		});
 	});
 }(jQuery));

@@ -40,7 +40,7 @@ $themes = array(
 		</div>
 	</div>
 	<div class="show-matches">
-		<label for="<?php echo $this->get_field_name('show_matches'); ?>">Show Matches:</label>
+		<label for="<?php echo $this->get_field_name('show_matches'); ?>">Show All Matches:</label>
 		<input id="<?php echo $this->get_field_id('show_matches'); ?>" name="<?php echo $this->get_field_name('show_matches'); ?>" type="checkbox" value="1"<?php if($show_matches) { echo " checked"; };?>>
 	</div>
 </div>

@@ -1,9 +1,9 @@
 <?php
 
-class WorldCup_Widget_Scorers extends WorldCup_Widget {
+class WorldCup_Widget_Groups extends WorldCup_Widget {
 
     /**
-     * @since    1.0.2
+     * @since    1.0.4
      *
      * @var      string
      */
@@ -25,11 +25,11 @@ class WorldCup_Widget_Scorers extends WorldCup_Widget {
 
 		// TODO: update description
 		WP_Widget::__construct(
-			$this->get_widget_slug() . '-scorers',
-			__( 'WorldCup Widget: Scorers', $this->get_widget_slug() ),
+			$this->get_widget_slug() . '-groups',
+			__( 'WorldCup Widget: Groups', $this->get_widget_slug() ),
 			array(
 				'classname'  => $this->get_widget_slug().'-class',
-				'description' => __( 'Show Top Goal Scorers, for entire WorldCup or specific team. Follow the Golden Boot.', $this->get_widget_slug() )
+				'description' => __( 'Group Rankings/Stats', $this->get_widget_slug() )
 			)
 		);
 
@@ -77,14 +77,12 @@ class WorldCup_Widget_Scorers extends WorldCup_Widget {
 
 		$widget_string = $before_widget;
 
-		$selected_team 	= empty($instance['selected_team']) ? '' : apply_filters('selected_team', $instance['selected_team']);
+		$selected_group	= empty($instance['selected_group']) ? '' : apply_filters('selected_group', $instance['selected_team']);
 		$theme 			= empty($instance['theme']) ? '' : apply_filters('theme', $instance['theme']);
-		$playercount 	= empty($instance['playercount']) ? '' : apply_filters('playercount', $instance['playercount']);
-		$show_emblem 	= empty($instance['show_emblem']) ? '' : apply_filters('show_emblem', $instance['show_emblem']);
 
 		// TODO: Here is where you manipulate your widget's values based on their input fields
 		ob_start();
-		include( $this->get_widget_path() . 'views/scorers/widget.php' );
+		include( $this->get_widget_path() . 'views/group-stage/widget.php' );
 		$widget_string .= ob_get_clean();
 		$widget_string .= $after_widget;
 
@@ -109,10 +107,8 @@ class WorldCup_Widget_Scorers extends WorldCup_Widget {
 
 		$instance = $old_instance;
 
-		$instance['selected_team']	= strip_tags(stripslashes($new_instance['selected_team']));
+		$instance['selected_group']	= strip_tags(stripslashes($new_instance['selected_group']));
 		$instance['theme'] 			= strip_tags(stripslashes($new_instance['theme']));
-		$instance['playercount'] 	= strip_tags(stripslashes($new_instance['playercount']));
-		$instance['show_emblem']	= strip_tags(stripslashes($new_instance['show_emblem']));
 
 
 		return $instance;
@@ -129,20 +125,16 @@ class WorldCup_Widget_Scorers extends WorldCup_Widget {
 		$instance = wp_parse_args(
 			(array) $instance,
 				array(
-					'selected_team' => '',
-					'theme' => '',
-					'playercount' => '',
-					'show_emblem' => ''
+					'selected_group' => '',
+					'theme' => ''
 				)
 		);
 
-		$selected_team 	= strip_tags(stripslashes($new_instance['selected_team']));
+		$selected_group	= strip_tags(stripslashes($new_instance['selected_group']));
 		$theme 			= strip_tags(stripslashes($new_instance['theme']));
-		$playercount	= strip_tags(stripslashes($new_instance['playercount']));
-		$show_emblem	= strip_tags(stripslashes($new_instance['show_emblem']));
 
 		// Display the admin form
-		include( $this->get_widget_path() . 'views/scorers/admin.php' );
+		include( $this->get_widget_path() . 'views/group-stage/admin.php' );
 
 	} // end form
 

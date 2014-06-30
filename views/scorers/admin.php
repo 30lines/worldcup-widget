@@ -20,7 +20,7 @@ $themes = array(
 ?>
 <div class="worldcup-admin">
 
-	<img src="<?php echo $teams[$selectedTeam]['logo']; ?>" />
+	<img src="<?php echo ($teams[$selectedTeam]['logo']) ?: plugins_url() . '/worldcup-widget/flags/golden-boot.png'; ?>" />
 	<div class="theme">
 		<label for="<?php echo $this->get_field_name('theme'); ?>">Theme:</label>
 		<select id="<?php echo $this->get_field_id('theme'); ?>" name="<?php echo $this->get_field_name('theme'); ?>">
@@ -37,7 +37,7 @@ $themes = array(
 		<div class="team">
 			<label for="<?php echo $this->get_field_name('selected_team'); ?>">Select Team:</label>
 			<select id="<?php echo $this->get_field_id('selected_team'); ?>" name="<?php echo $this->get_field_name('selected_team'); ?>">
-				<option data-logo="" value="-1" data-id="-1">All</option>
+				<option selected  data-logo="<?php echo plugins_url() . '/worldcup-widget/flags/golden-boot.png'; ?>" value="-1" data-id="-1">All (Golden Boot)</option>
 			<?php foreach($teams as $key => $team) { ?>
 				<?php $selected = ($instance['selected_team'] == $key) ? 'selected' : ''; ?>
 				<option <?php echo $selected; ?> data-logo="<?php echo $team['logo'];?>" value="<?php echo $key; ?>" data-id="<?php echo $team['id'];?>"><?php echo $team['name']; ?></option>

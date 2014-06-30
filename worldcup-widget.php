@@ -15,7 +15,7 @@
  * Plugin Name:       WorldCup Widget
  * Plugin URI:        http://30lines.com
  * Description:       
- * Version:           1.0.3
+ * Version:           1.0.4
  * Author:            Eric Katz
  * Author URI:        http://ericnkatz.com
  * License:           GPL-2.0+
@@ -163,7 +163,9 @@ class WorldCup_Widget extends WP_Widget {
 // Include actual widget files
 include( plugin_dir_path(__FILE__) . 'widgets/widget-main.php' );
 include( plugin_dir_path(__FILE__) . 'widgets/widget-scorers.php' );
+include( plugin_dir_path(__FILE__) . 'widgets/widget-groups.php' );
 
 // Create the widgets
 add_action( 'widgets_init', create_function( '', 'register_widget("WorldCup_Widget_Main");' ) );
 add_action( 'widgets_init', create_function( '', 'register_widget("WorldCup_Widget_Scorers");' ) );
+add_action( 'widgets_init', create_function( '', 'register_widget("WorldCup_Widget_Groups");' ) );

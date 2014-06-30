@@ -53,19 +53,72 @@
 	max-width: 25%;
 	width:41px;
 	border-radius: 50%;
-	box-shadow: 1px 1px 0 0 #CCC;
+	box-shadow: 1px 1px 0 0 rgba(100,100,100,0.8);
 	margin-right: 5%;
+	position: relative;
+	z-index: 10;
+	top: 0.4em;
+	left: 2em;
+}
+.top-scorers > img {
+	margin:0 auto;
+	display:block;
 }
 .worldcup-widget-class .player .nationality {
 	display:none;
 }
+.worldcup-widget-class .player .nickname {
+	margin-left: 1.5em;
+	vertical-align: top;
+	position: relative;
+	top: 1em;
+}
 .worldcup-widget-class .player .flag {
 	position:absolute;
 	top: 4px;
-	right: 0;
+	left: -2px;
 	max-width: 20%;
 	z-index: 5;
-	width:32px;
+	width: 48px;
+}
+.worldcup-widget-class .player .extra-stats {
+	display:none;
+}
+.worldcup-widget-class .group-rank {
+	float:left;
+	background:#fff;
+	display:block;
+	border-radius: 50%;
+	width:16px;
+	height:16px;
+	text-align: center;
+	top:2.2em;
+	color:#000;
+	box-shadow: 1px 1px 0 0 rgba(100,100,100,0.8);
+	position:absolute;
+	margin-bottom:0;
+}
+.worldcup-widget-class .team {
+	position: relative;
+}
+.worldcup-widget-class .team .country img {
+	margin-right:1em;
+	margin-bottom:0;
+}
+.worldcup-widget-class .team .country {
+	font-weight:bold;
+	margin-bottom:0;
+	font-size:1.25em;
+}
+.worldcup-widget-class .team .record {
+	text-align: left;
+	font-size:1.1em;
+}
+.worldcup-widget-class .team .totals {
+	text-align: center;
+	font-size:1.2em;
+	display: block;
+	font-weight:bold;
 }
 /*
 .theme-dark .match .score {
